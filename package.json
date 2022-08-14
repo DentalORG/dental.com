@@ -1,6 +1,6 @@
 {
   "name": "dental.com",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,6 +8,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "devextreme": "22.1.4",
+    "devextreme-vue": "22.1.4",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15"
   },
@@ -19,5 +21,21 @@
     "eslint-plugin-vue": "^9.0.0",
     "prettier": "^2.5.1",
     "vite": "^2.9.9"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }
