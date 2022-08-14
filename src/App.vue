@@ -3,13 +3,29 @@ import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
+<script>
+import DxButton from "devextreme-vue/button";
+import notify from "devextreme/ui/notify";
+
+export default {
+  components: {
+    DxButton,
+  },
+  methods: {
+    sayHelloWorld() {
+      notify("The OK button was clicked");
+    },
+  },
+};
+</script>
+
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
+      <DxButton text="Click me" @click="sayHelloWorld" />
       <nav>
         <RouterLink to="/">HomeER</RouterLink>
         <RouterLink to="/about">About</RouterLink>
